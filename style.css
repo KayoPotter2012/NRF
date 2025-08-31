@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --laranja: #dc4405;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+p, label, option, button, textarea{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* cabeçalho */
+header{
+    background-color: var(--laranja);
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1em;
+    position: relative
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    gap: .5em
+}
+
+header div button{
+    background-color: #dc4405;
+    border: none;
+}
+
+header div img{
+    height: 2.5em;
+}
+
+.logo_cabecalho{
+    height: 1.75em;
+}
+
+.menu-hamburguer_cabecalho{
+    height: 2.25em;
+}
+
+/* questionario */
+.questionario{
+    padding: 1em 1em 0 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.perguntas_questionario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.perguntas_questionario label{
+    font-size: 1rem;
+    color: grey
+}
+
+.perguntas_questionario input{
+    width:  30%;
+    border: 2px solid gray;
+    padding: 5px .5em;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+.botao_questionario{
+    border: none;
+    background-color: var(--laranja);
+    color: white;
+    box-sizing: border-box;
+    padding: .25em;
+    font-weight: 500;
+    font-size: 1.25rem;
+    border-radius: 100px;
+}
+
+hr{
+    height: 2px;
+    background-color: gray;
+    border: none
+}
+
+/* sugestão */
+.sugestao{
+    margin: 1em;
+    background-color: var(--laranja);
+    padding: 2em;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sugestao_produto{
+    background-color: white;
+    padding: 1em;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sugestao_produto img{
+    width: 4em;
+    border-radius: 15px;
+}
+
+.produto_descriçao{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: .25em;
+    width: 75%;
+}
+
+.nome_produto, .preço_produto{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: .75rem;
+    color: gray
+}
+
+.produto_descriçao div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5em
+}
+
+#checkbox1_rótulo, 
+#checkbox2_rótulo, 
+#checkbox3_rótulo,
+#checkbox4_rótulo,
+#checkbox5_rótulo{
+    background-color: var(--laranja);
+    padding: .25em 1.5em;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: .75rem;
+}
+
+#checkbox1, 
+#checkbox2, 
+#checkbox3,
+#checkbox4,
+#checkbox5{
+    display: none;
+}
+
+#checkbox1:checked ~ #checkbox1_rótulo {
+  background-color: #ff8454;
+}
+
+#checkbox2:checked ~ #checkbox2_rótulo {
+  background-color: #ff8454;
+}
+
+#checkbox3:checked ~ #checkbox3_rótulo {
+  background-color: #ff8454;
+}
+
+#checkbox4:checked ~ #checkbox4_rótulo {
+  background-color: #ff8454;
+}
+
+#checkbox5:checked ~ #checkbox5_rótulo {
+  background-color: #ff8454;
+}
+
+/* chat */
+.chat{
+    height: 7vh;
+    background-color: #dc4405;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.chat textarea{
+    width: 80%;
+    height: 4em;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: .5em;
+    box-sizing: border-box;
+    color: black;
+}
+
+.chat button{
+    background-color: #ff8454;
+    border: none;
+    padding: .75em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+.chat button img{
+    height: 3em;
+}
+
+/* Popup */
+#popup{
+    box-sizing: border-box;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    right: 0;
+    left: 0;
+    gap: 1em;
+    padding: 1em;
+    justify-content: top;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#popup button{
+    background-color: var(--laranja);
+    padding: .25em 1.5em;
+    border: none;
+    border-radius: 50px;
+    width: 80%;
+}
+
+#popup button a{
+    color: white;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+#popup ul{
+    border-top: 2px solid gray;
+    width: 80%;
+    list-style: none;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    font-size: 1.5rem;
+}
+
+#popup ul li a{
+    text-decoration: none;
+    color: gray;
+}
+
+/* JS */
+.chat, .sugestao{
+    display: none;
+}

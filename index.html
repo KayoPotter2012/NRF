@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRF_2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="https://www.swift.com.br/"><img src="./img/logoSwift.svg" class="logo_cabecalho"></a>
+        <div>
+            <img src="./img/perfil.svg">
+            <button><img src="./img/menuHamburguer.svg" class="menu-hamburguer_cabecalho"></button>
+        </div>
+
+        <section id="popup">
+            <button><a href="https://swift.com.br">Acesse o site da Swift</a></button>
+            <ul>
+                <li><a href="https://wa.me/551140208588">WhatZapp</a></li>
+                <li><a href="https://swift-jbs.freshdesk.com/support/tickets/new">E-mail</a></li>
+                <hr>
+                <li><a href="https://www.swift.com.br/institucional">Nossa história</a></li>
+                <li><a href="https://www.swift.com.br/nossas-lojas">Nossas lojas</a></li>
+                <li><a href="https://respeitoaoplaneta.swift.com.br/">Sustentabilidade</a></li>
+            </ul>
+        </section>
+    </header>
+    <section class="questionario">
+        <div class="perguntas_questionario">
+            <label for="QTD_pessoas">Quantas Pessoas?</label>
+            <input type="number" name="QTD_pessoas" id="QTD_pessoas">
+        </div>
+
+        <div class="perguntas_questionario">
+            <label for="Ocasião">Qual Ocasião?</label>
+            <input type="text" name="Ocasião" id="ocasião">
+        </div>
+
+        <div class="perguntas_questionario">
+            <label for="Orçamento">Quanto é o Orçamento?</label>
+            <input type="number" name="Orçamento" id="orçamento">
+        </div>
+
+        <div class="perguntas_questionario">
+            <label for="menores">Quantos menores de 18 anos?</label>
+            <input type="number" name="menores" id="menores">
+        </div>
+        <button id="botaoSugestao" class="botao_questionario">Gerar sugestão</button>
+        <hr>
+    </section>
+    
+    <section id="sugestao" class="sugestao">
+        <div id="sugestao_produto_prato-principal" class="sugestao_produto">
+            <img src="./img/Prato-principal_Capa-de-file.png">
+            <div class="produto_descriçao">
+                <p class="nome_produto">Capa de Filé Swift 0,6kg a 1,6Kg</p>
+                <div>
+                    <p class="preço_produto">R$ 34,90/Kg</p>
+                    <input type="checkbox" name="checkbox1" id="checkbox1">
+                    <label for="checkbox1" id="checkbox1_rótulo">Adicionar</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="sugestao_produto">
+            <img src="./img/Entrada_Pao-de-alho.png">
+            <div class="produto_descriçao">
+                <p class="nome_produto">Pão de Alho Bolinha Zinho 300g</p>
+                <div>
+                    <p class="preço_produto">R$ 9,90/Un.</p>
+                    <input type="checkbox" name="checkbox2" id="checkbox2">
+                    <label for="checkbox2" id="checkbox2_rótulo">Adicionar</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="sugestao_produto">
+            <img src="./img/Acompanhamento_Linguiça-toscana.png">
+            <div class="produto_descriçao">
+                <p class="nome_produto">Linguiça Toscana Swift 700g</p>
+                <div>
+                    <p class="preço_produto">R$ 17,90/Un.</p>
+                    <input type="checkbox" name="checkbox3" id="checkbox3">
+                    <label for="checkbox3" id="checkbox3_rótulo">Adicionar</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="sugestao_produto">
+            <img src="./img/Tempero_bovinos.png">
+            <div class="produto_descriçao">
+                <p class="nome_produto">Tempero Para Bovinos Swift 120g</p>
+                <div>
+                    <p class="preço_produto">R$ 14,00/Un.</p>
+                    <input type="checkbox" name="checkbox4" id="checkbox4">
+                    <label for="checkbox4" id="checkbox4_rótulo">Adicionar</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="sugestao_produto_sobremesa" class="sugestao_produto">
+            <img src="./img/Sobremesa_Açaí.png">
+            <div class="produto_descriçao">
+                <p class="nome_produto">Açaí Swift 500g</p>
+                <div>
+                    <p class="preço_produto">R$ 15,90/Un.</p>
+                    <input type="checkbox" name="checkbox5" id="checkbox5">
+                    <label for="checkbox5" id="checkbox5_rótulo">Adicionar</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="chat" class="chat">
+        <textarea id="chatPrompt"></textarea>
+        <button id="botaoChat" class="button_chat"><img src="./img/enviar.svg" alt=""></button>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
