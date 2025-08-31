@@ -15,6 +15,7 @@ let chatPrompt = document.getElementById('chatPrompt')
 let imgSobremesa = document.querySelector('#sugestao_produto_sobremesa img')
 let nomeSobremesa = document.querySelector('#sugestao_produto_sobremesa div p')
 let preçoSobremesa = document.querySelector('#sugestao_produto_sobremesa div div p')
+let bebidaProduto = document.getElementById('sugestao_produto_bebida')
 
 let imgPratoPrincipal = document.querySelector('#sugestao_produto_prato-principal img')
 let nomePratoPrincipal = document.querySelector('#sugestao_produto_prato-principal div p')
@@ -41,12 +42,18 @@ botaoChat.addEventListener('click', () => {
         nomeSobremesa.innerHTML = 'Gran Gateau Swift 450g'
         preçoSobremesa.innerHTML = 'R$ 39,90/Un.'
 
-        contador = contador + 1
+        contador = 2
+        
     } else if (contador == 2){
-        chatPrompt.value = ''
+        chatPrompt.value = 'Pode me recomendar uma bebida'
         imgPratoPrincipal.src = './img/Prato-principal_Picanha.png'
         nomePratoPrincipal.innerHTML = 'Picanha Linha Mais de 1,1Kg a 1,6Kg'
         preçoPratoPrincipal.innerHTML = 'R$ 65,90/Un.'
+
+        contador = 3
+    } else if (contador == 3){
+        chatPrompt.value = ''
+        bebidaProduto.style.display = 'flex'
     }
 })
 
