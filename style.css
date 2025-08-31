@@ -127,7 +127,7 @@ hr{
 
 .nome_produto, .preço_produto{
     font-family: "Roboto Condensed", sans-serif;
-    font-size: .75rem;
+    font-size: 1rem;
     color: gray
 }
 
@@ -142,7 +142,8 @@ hr{
 #checkbox2_rótulo, 
 #checkbox3_rótulo,
 #checkbox4_rótulo,
-#checkbox5_rótulo{
+#checkbox5_rótulo,
+#checkbox6_rótulo{
     background-color: var(--laranja);
     padding: .25em 1.5em;
     color: white;
@@ -155,7 +156,8 @@ hr{
 #checkbox2, 
 #checkbox3,
 #checkbox4,
-#checkbox5{
+#checkbox5,
+#checkbox6{
     display: none;
 }
 
@@ -176,6 +178,10 @@ hr{
 }
 
 #checkbox5:checked ~ #checkbox5_rótulo {
+  background-color: #ff8454;
+}
+
+#checkbox6:checked ~ #checkbox6_rótulo {
   background-color: #ff8454;
 }
 
@@ -264,9 +270,10 @@ hr{
 #popup ul li a{
     text-decoration: none;
     color: gray;
+    font-size: 1.5rem;
 }
 
 /* JS */
-.chat, .sugestao{
+.chat, .sugestao, #sugestao_produto_bebida{
     display: none;
 }
