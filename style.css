@@ -127,7 +127,7 @@ hr{
 
 .nome_produto, .preço_produto{
     font-family: "Roboto Condensed", sans-serif;
-    font-size: 1rem;
+    font-size: .75rem;
     color: gray
 }
 
@@ -277,3 +277,4 @@ hr{
 .chat, .sugestao, #sugestao_produto_bebida{
     display: none;
 }
+
